@@ -1,0 +1,505 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, PingFang, sans-serif;
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  background-color: #be3144;
+  color: white;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+.nav-list li {
+  display: inline-block;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.nav-list li a {
+  display: inline-block;
+  color: white;
+}
+
+.nav-list li:last-child {
+  margin-right: 1.5rem;
+}
+
+.nav-list li:hover {
+  background: #f7d181;
+}
+
+.nav-list li:hover a {
+  color: #be3144;
+}
+
+#welcome-section {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(62deg, #3a3d40 30%, #4a5d70 100%);
+}
+
+#welcome-section h1 {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3rem;
+  font-weight: 500;
+  z-index: 1;
+}
+
+#welcome-section p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-style: italic;
+  color: white;
+  z-index: 1;
+  color: #be3144;
+}
+
+#projects {
+  width: 100%;
+  text-align: center;
+  background-color: #E1E1E1;
+}
+
+#projects .projects-intro {
+  font-size: 4rem;
+  padding-top: 7rem;
+  margin-bottom: 3rem;
+}
+
+#projects .projects-intro span {
+  border-bottom: 0.1rem solid brown;
+}
+
+#projects .project-grid {
+  display: -ms-grid;
+  display: grid;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-column-gap: 2rem;
+  margin: 0 auto;
+}
+
+#projects .project-grid .project-card {
+  background: #080441;
+  margin-bottom: 3rem;
+}
+
+#projects .project-grid .project-card .project-img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+#projects .project-grid .project-card .project-title {
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#projects .project-grid .project-card .project-title span {
+  color: #ff7f50;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#projects .project-grid .project-card:hover .project-title span {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity ease-in 0.35s;
+  transition: opacity ease-in 0.35s;
+}
+
+#skills {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #303841;
+  color: white;
+  height: 100vh;
+}
+
+#skills .skill-group {
+  padding-top: 8rem;
+  width: 45%;
+}
+
+#skills .skill-group .skill-intro {
+  font-size: 3rem;
+  font-weight: 650;
+  font-style: Italic;
+  margin-bottom: 3rem;
+}
+
+#skills .skill-group .bar {
+  background: #353b49;
+  display: block;
+  height: 0.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1rem #2187e763;
+          box-shadow: 0 0 1rem #2187e763;
+}
+
+#skills .skill-group .bar span {
+  height: 0.5rem;
+  float: left;
+  background: #2187e763;
+}
+
+#skills .html {
+  width: 90%;
+  -webkit-animation: html 2s;
+          animation: html 2s;
+}
+
+#skills .css {
+  width: 75%;
+  -webkit-animation: css 2s;
+          animation: css 2s;
+}
+
+#skills .scss {
+  width: 65%;
+  -webkit-animation: scss 2s;
+          animation: scss 2s;
+}
+
+#skills .javascript {
+  width: 70%;
+  -webkit-animation: javascript 2s;
+          animation: javascript 2s;
+}
+
+#skills .jquery {
+  width: 70%;
+  -webkit-animation: jquery 2s;
+          animation: jquery 2s;
+}
+
+#contact {
+  background: #45567d;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+#contact .contact-intro {
+  text-align: center;
+}
+
+#contact .contact-intro p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#contact .contact-intro h2 {
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+#contact .contact-links {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+#contact .contact-links li {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#contact .contact-links li:hover {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+#contact .contact-links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes scss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes scss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+@-webkit-keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes jquery {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes jquery {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 800px) {
+  #navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .projects-intro {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  #projects .projects-intro span {
+    border-bottom: 0.075rem solid brown;
+  }
+  #projects .project-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 650px) {
+  #navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-list li {
+    display: inline-block;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .nav-list li a {
+    display: inline-block;
+    color: white;
+  }
+  .nav-list li:last-child {
+    margin-right: 1.5rem;
+  }
+  .nav-list li:hover {
+    background: #f7d181;
+  }
+  .nav-list li:hover a {
+    color: #be3144;
+  }
+  #projects .projects-intro {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 0;
+  }
+  #projects .projects-intro span {
+    border-bottom: 0.05rem solid brown;
+  }
+  #projects .project-grid {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

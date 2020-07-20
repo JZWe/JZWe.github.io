@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	font-family: "Microsoft JhengHei","Lucida Grande";
+}
+.wrap
+{
+	max-width:1024px;
+	margin:0 auto;
+}
+
+.top
+{
+	height:380px;
+	width:100%;
+	background:center no-repeat url(../img/Hero.png);
+	text-align:center; 
+}
+
+.top h1
+{
+	padding-top:89px;
+	color:white;
+	font-size:40px;
+	line-height:41px;
+}
+select {
+ box-sizing: content-box;
+ padding-top:14px;
+ padding-bottom:13px;
+ padding-left:9px;
+ padding-right:279px;
+ background : rgba(255,255,255, 0.45) ;
+ font-weight:bold;
+}
+
+.topdownList{
+	border:3px solid black;
+	border-radius:3px;
+	margin-top:96px;
+	width:143px;
+}
+.hotArea{
+	margin-left:100px;
+	margin-top:50px;
+	padding-top:55px;
+	padding-bottom:18px;
+	height:112px;
+	width:80%;
+	position:relative;
+	z-index:1;
+	background-color:white;
+	box-shadow: 0 3px 3px  rgba(0,0,0,0.20);
+}
+.hotArea h2{
+	position:absolute;
+	top:20px;
+	font-weight:bold;
+	margin-left:25px;
+}
+
+.Button1,.Button2,.Button3,.Button4{
+	color:white;
+	border-radius:5px;
+	padding:10px 35px;
+	margin-right:22px;
+}
+
+.Button1:hover,.Button2:hover,.Button3:hover,.Button4:hover{
+	box-shadow: 3px 3px 5px rgba(33,33,33,.35); 
+}
+
+.Button1{
+	margin-left:50px;
+	background-color:#8A82CC;
+}
+.Button2{
+	background-color:#FFA782;
+}
+.Button3{
+	background-color:#F5D005;
+}
+.Button4{
+	background-color:#559AC8;
+}
+.thin_hr {
+	margin-top:110px;
+	margin-left:2%;
+	border:1px dashed #559AC8;
+	height:1px;
+	width:98%;
+}
+.fa-sort-down{
+	color:#559AC8;
+	padding-left:6px;
+	position:absolute;
+	left:50%;
+	margin-top:-10px;
+	height:24px;
+	width:24px;
+	border:1px solid #559AC8;
+	border-radius:50%;
+	z-index:1;
+	background-color:white;
+}
+
+.zoneName
+{
+	font-size:36px;
+	font-weight:bold;
+	color: #8A82CC;
+	margin-left:2.5%;
+	margin-top:-200px;
+	margin-bottom:24px;
+	text-align:center;
+}	
+
+.card{
+    height:273px;
+}
+.card:hover{
+	 box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+	 border:1px solid blue;
+}
+.card-img-top
+{
+	height:155px;
+	position:relative;
+	background-image:url(http://khh.travel/FileArtPic.ashx?id=1269&w=1280&h=960);
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+
+.icon{
+	color:blue;
+	padding:12px 12px;
+}
+
+.areaInfo{
+	margin-top:260px;
+	padding-bottom:90px;
+}
+.custom-row{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	margin-left:25px;
+	
+}
+.col{
+	grid-column: span 6;
+}
+
+.card-img-top h2,.card-img-top h5{
+	position:absolute;
+	color:white;
+	font-weight:bold;
+}
+.card-img-top h2{
+  position:absolute;
+  bottom:14px;
+  left:22px;
+}
+
+.card-img-top h5{
+   position:absolute;
+   bottom:11px;
+   right:24px;
+}
+
+.card{
+	margin-bottom:36px;
+}
+
+.card-body p{
+	margin-bottom:16px;
+}
+
+
+.fa-clock{
+	margin-left:-2px;
+	margin-right:5px;
+	color:#B355F6;
+}
+
+.fa-map-marker-alt{
+	color:#EA981F;
+	margin-right:7px;
+}
+
+.fa-mobile-alt{
+	color:#1854AE;
+	margin-left:1px;
+	margin-right:9px;
+} 
+
+.fa-tag{
+	
+	color:yellow;
+	float:left;
+}
+.telphone{
+	float:left;
+	position:relative;
+}
+
+.info{
+	float:right;
+}
+
+.info span{
+	float:right;	
+}
+
+.bottom{
+	height:90px;
+	position:relative;
+	margin-top:-90px;
+	padding-top:24px;
+	width:1024px;
+	margin-left:195px;
+	background: #559AC8;
+}
+.bottom h5{
+	margin-left:450px;
+	color:white;
+}
+
+.bottom{
+	margin-left:415px;
+	margin-top:14px;
+	color: #FFD366;
+}
+
+.clearfix{
+	clear:both;
+}	
+
+.container nav{
+	margin-left:43%;
+	
+}
+@media(min-width:500px) and (max-width:1024px) {
+	.hotArea{
+		margin-left:10%;
+		height:270px;
+	}
+	.Button1{
+		margin-left:0;
+	}
+	.Button1,.Button2,.Button3,.Button4{
+	   display:block;
+	   width:90%;
+	   margin-left:5%;
+	   margin-right:5%;
+	   margin-top:10px;
+	}
+
+	.fa-sort-down{
+	   left:49%;
+	   top:96%;
+	}
+	.thin_hr {
+	   margin-top:250px;
+	   margin-left:2%;
+	   border:1px dashed #559AC8;
+	   height:1px;
+	}
+	.col{
+	   grid-column: span 12;
+	}
+	.container nav{
+		display:none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

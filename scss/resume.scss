@@ -1,0 +1,397 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$navbar-background:#be3144;
+$black : black;
+$white: white;
+$project_background: #E1E1E1;
+$card-background:#080441;
+$contact-background:#45567d;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	font-family:Arial, PingFang, sans-serif;
+	font-size:16px; // default 
+}
+body::-webkit-scrollbar{
+	width:0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+	background:#1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+	background:#6649b8;
+}
+a{
+	text-decoration:none;
+}
+#navbar{
+    background-color:$navbar-background;
+	color:$white;
+	width:100%;
+    height:80px;
+	display:flex;           	 // 利用flex做排版
+    flex-direction:row;      	 // 主軸線為x軸
+	justify-content:flex-end; 	 // 把nav-list擺在主軸線的最後方
+	position:fixed;          	 // 把固定navbar在相同的位置
+	top:0;                   	 // 固定navbar在瀏覽器畫面最上方
+	font-size:1.5rem;
+	z-index:3;
+}
+
+.nav-list{
+	li{
+		display:inline-block;
+		padding-top:28px;
+		padding-bottom:28px;
+		padding-left:25px;
+		padding-right:25px;
+		a{
+		  display:inline-block;
+		  color:$white;	
+		}
+	}
+	li:last-child{
+	margin-right:1.5rem;
+	}
+	li:hover{
+		background:rgb(247, 209, 129);
+		a{
+			color:$navbar-background;	
+		}
+	}
+}
+
+#welcome-section{
+	text-align:center;
+	display: flex;
+	flex-direction:column;  	// 主軸線為y軸
+	justify-content: center;    // 把h1、p擺在主軸線中間
+	width: 100%;
+	height: 100vh; 				// vh表示目前瀏覽器的可視範圍，很適合用來配合RWD使用
+	background-image: linear-gradient(62deg, #3a3d40 30%, #4a5d70 100%);
+	h1{
+		color:$white;
+	 	align-self:center;	 
+	    font-size:3rem;
+		font-weight:500;
+		z-index:1;
+	}
+	p{
+	  font-size:2rem;
+	  margin-top:1rem;
+	  font-style:italic;
+	  color:$white;
+	  z-index:1;
+	  color:$navbar-background;	
+	}
+}
+
+#projects{
+   width:100%;
+   text-align:center;
+   background-color:$project_background;
+   .projects-intro{
+	   font-size:4rem;
+	   padding-top:7rem;
+	   margin-bottom:3rem;
+	   span{
+		 border-bottom: 0.1rem solid brown;
+	   }
+	}
+   .project-grid{
+	   display:grid;
+	   padding-left:2rem;
+	   padding-right:2rem;
+	   grid-template-columns: auto auto auto;
+	   grid-column-gap:2rem;
+	   margin:0 auto;
+	   .project-card{
+			background:$card-background;
+			margin-bottom:3rem;
+			.project-img{
+				width:100%;
+				height:20rem;
+				object-fit:cover;
+				background-position:center;
+				background-size:cover;
+			}
+			.project-title{
+				color:$white;
+				font-size:1.5rem;
+				padding-top:1rem;
+				padding-bottom:1rem;
+				span{
+					color:#ff7f50;
+					visibility:hidden;
+					opacity:0;
+				}
+			}
+
+		}
+		.project-card:hover{
+			.project-title{
+				span{
+					visibility:visible;
+					opacity:1;
+					transition:opacity ease-in 0.35s;
+				}
+			}
+		}
+   	}
+}
+
+#skills{
+	text-align:center;
+	display: flex;
+	flex-direction:row;  	// 主軸線為x軸
+	justify-content: center;    // 把h1、p擺在主軸線中間
+	background-color: #303841;
+	color:$white;
+	height:100vh;
+    .skill-group{
+		padding-top:8rem;
+		width:45%;
+		.skill-intro{
+			font-size:3rem;
+			font-weight:650;
+			font-style:Italic;
+			margin-bottom:3rem;
+		}
+		.bar{
+			background:#353b49;
+			display:block;
+			height:0.5rem;
+			margin-bottom:2rem;
+			border:1px solid rgba(0,0,0,0.3);
+			border-radius:0.25rem;
+			overflow:hidden;
+			box-shadow:0 0 1rem #2187e763;
+			span{
+				height:0.5rem;
+				float:left;
+				background:#2187e763;
+			}
+		}
+	}
+    
+	.html{
+		width:90%;
+		animation: html 2s;
+	}
+	
+	.css{
+		width:75%;
+		animation: css 2s;
+	}
+	.scss{
+		width:65%;
+		animation: scss 2s;
+	}
+	.javascript{
+		width:70%;
+		animation: javascript 2s;
+	}
+	.jquery{
+		width:70%;
+		animation: jquery 2s;
+	}
+    
+}
+
+#contact{
+	background:$contact-background;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color:$white;
+	.contact-intro{
+		text-align:center;
+		p{
+			font-size:3rem;
+			font-weight:700;
+			margin-bottom:1rem;
+		}
+		h2{
+			font-style:italic;
+			font-size:1.25rem;
+		}
+	}
+	.contact-links{
+		
+		margin-top:10rem;
+		text-align:center;
+		li{
+			display:inline-block;
+			margin-left:1rem;
+			margin-right:1rem;
+		}
+		li:hover{
+			transform:translateY(25px);
+			transition:transform 1s ease-out;
+		}
+		a{
+			font-size:1.5rem;
+			text-decoration:none;
+			color:$white;
+		}
+	}
+}
+
+@keyframes html{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:90%
+	}
+}
+
+@keyframes css{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:75%
+	}
+}
+@keyframes scss{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:65%
+	}
+}
+@keyframes javascript{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:70%
+	}
+}
+@keyframes jquery{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:70%
+	}
+}
+@media(min-width:650px)and(max-width:800px){
+   #navbar{
+	   justify-content: center;
+	}
+   
+	#projects{
+		
+		.projects-intro{
+			font-size:3rem;
+			margin-bottom:3rem;
+			
+			span{
+				border-bottom: 0.075rem solid brown;
+			}
+		}
+		.project-grid{
+			grid-template-columns: auto auto;
+		}
+	}
+   
+}
+
+@media(max-width:650px){
+    #navbar{
+	   justify-content: center;
+	}
+	.nav-list{
+		li{
+			display:inline-block;
+			padding-top:28px;
+			padding-bottom:28px;
+			padding-left:15px;
+			padding-right:15px;
+			a{
+			display:inline-block;
+			color:$white;	
+			}
+		}
+		li:last-child{
+		margin-right:1.5rem;
+		}
+		li:hover{
+			background:rgb(247, 209, 129);
+			a{
+				color:$navbar-background;	
+			}
+		}
+	}
+	#projects{
+		.projects-intro{
+			font-size:2rem;
+			margin-bottom:3rem;
+			padding-left:0;
+			span{
+				
+				border-bottom: 0.05rem solid brown;
+			}
+		}
+		.project-grid{
+			grid-template-columns: auto;
+		}
+	}
+   
+}

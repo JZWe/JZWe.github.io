@@ -1,0 +1,251 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Custom CSS */
+
+body, html {
+  height: 100%;
+}
+
+body{
+     font-family: Arial, Helvetica, sans-serif;
+     line-height: 2;
+     text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+.card-body{
+   text-align: center;
+   opacity:0;
+   margin-top:82%;
+   left:50%;
+   transition:.5s ease;
+   background: rgb(0, 0, 0);
+   background:rgba(0,0,0,0.5);
+}
+
+
+
+
+
+#options{
+    margin-top:50px;
+}
+
+#options label{
+    margin-left:5px;
+}
+
+.scheduling{
+   height:400px;
+   width:400px;
+   background-position:center;
+}
+
+.scheduling{
+    background-image: url(https://advancesystems.ie/wp-content/uploads/2017/11/Switch-to-Employee-Scheduling-Software.jpg);
+}
+
+
+
+#footer
+{
+    text-align:center;
+    margin-top:100px;
+    height:100px;
+    background-color:#17479A;
+    color:white;
+}
+
+#footer p
+{
+    padding-top:35px;
+}
+
+
+
+#submitBtn,#resetBtn
+{
+    margin-bottom:30px;
+}
+
+.btn
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+#ramenPicture
+{
+    margin-bottom:30px;
+}
+#eatWhat
+{
+    margin-top:30px;
+}
+#list 
+{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+#list li{
+    text-align:center;
+}
+
+#info
+{
+    display:none;
+}
+
+.bg-os
+{
+    background-color:blue;
+}
+
+.bg-se
+{
+    background-color:red;
+}
+
+#songTitle
+{
+    height:32px;
+}
+
+#buttonGroup
+{
+    margin-bottom:50px;
+}
+#buttonGroup button
+{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+@media(min-width:992px) and (max-width:1000px){
+    .navbar-nav{
+        visibility: hidden;
+    }
+    .collapse{
+        margin-left:300px;
+    }
+}
+@media(max-width:1000px){
+    .card{
+        margin-left:5%;
+        margin-right:5%;
+    }
+    #intro {
+     background-position:center;
+    }
+   
+   
+    #day,#startTime,#endTime,#course{
+        display:block;
+        margin:0 auto;
+    }
+    #submitBtn,#resetBtn{
+        display:block;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        padding-top:5px;
+        padding-bottom:5px;
+        margin-top:10px;
+    }
+    #buttons_homework button{
+        display:block;
+        width:100%;
+    }
+}
+@media(max-width:1000px){
+    
+}
+canvas{
+    border: 2px solid black;
+    background-image:url(../img/grasses68.gif);
+}
+
+#talkBox{
+    height:20px;
+    color:brown;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.table-bordered tr,.table-bordered td,.table-bordered th{
+   border:3px solid pink;
+}
+
+.whitespace-hover{
+    background:grey;
+    opacity: 0.4;
+    transition: all 0.3s; 
+}
+/* table的td被hover時透過javascript添加此效果*/
+.opacity-light{
+    opacity:0.5;
+    transition: opacity 0.3s;  
+}
+

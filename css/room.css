@@ -1,0 +1,473 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.imageBlock {
+  max-width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.imageBlock .largeRow {
+  width: 70%;
+  float: left;
+}
+
+.imageBlock .largeRow .img {
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.imageBlock .smallRow {
+  width: 30%;
+  float: right;
+}
+
+.imageBlock .smallRow .img {
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.roomInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.roomInfo .roomInfo-left {
+  width: 50%;
+}
+
+.roomInfo .roomInfo-left .room-name {
+  font-size: 2rem;
+}
+
+.roomInfo .roomInfo-left .room-shortDescription {
+  margin-top: 3rem;
+}
+
+.roomInfo .roomInfo-left .room-shortDescription li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.roomInfo .roomInfo-left .room-description {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #6D7278;
+  line-height: 1.5rem;
+}
+
+.roomInfo .roomInfo-left .room-checkInAndOut {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.roomInfo .roomInfo-left .room-checkInAndOut .room-checkIn {
+  margin-right: 35%;
+}
+
+.roomInfo .roomInfo-left .room-checkInAndOut .room-checkIn span {
+  font-size: 1.25rem;
+}
+
+.roomInfo .roomInfo-left .room-checkInAndOut span {
+  font-size: 1.25rem;
+}
+
+.roomInfo .roomInfo-left .room-checkInAndOut p {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.roomInfo .roomInfo-left .amenities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #F0F0F0;
+}
+
+.roomInfo .roomInfo-left .amenities li {
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  width: 33.33333%;
+}
+
+.roomInfo .roomInfo-left .amenities li i {
+  width: 16px;
+  margin-right: 2px;
+}
+
+.roomInfo .roomInfo-middle {
+  width: 15%;
+  text-align: right;
+}
+
+.roomInfo .roomInfo-middle .room-normalDay span {
+  font-size: 1.5rem;
+}
+
+.roomInfo .roomInfo-middle .room-normalDay h4 {
+  margin-top: 1rem;
+  color: #6D7278;
+  font-size: 0.8rem;
+}
+
+.roomInfo .roomInfo-middle .room-holiday {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.roomInfo .roomInfo-middle .room-holiday h4 {
+  margin-top: 1rem;
+  color: #6D7278;
+}
+
+.roomInfo .roomInfo-right {
+  width: 35%;
+  padding-left: 8vw;
+  text-align: left;
+}
+
+.roomInfo .roomInfo-right .calnedar-section {
+  margin-bottom: 2rem;
+}
+
+.roomInfo .roomInfo-right .roomForm {
+  font-size: 0.875rem;
+  position: absolute;
+  left: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+}
+
+.roomInfo .roomInfo-right .roomForm .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 3rem;
+  color: red;
+}
+
+.roomInfo .roomInfo-right .roomForm .needs-validation {
+  width: 300px;
+  padding-left: 2rem;
+}
+
+.roomInfo .roomInfo-right .roomForm .needs-validation .input-group label {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.roomInfo .roomInfo-right .roomForm .needs-validation .input-group .input-item {
+  width: 300px;
+}
+
+.roomInfo .roomInfo-right .roomForm .needs-validation .price {
+  margin-bottom: 2rem;
+}
+
+.roomInfo .roomInfo-right .roomForm .normalAndHoliday {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.roomInfo .roomInfo-right .roomForm .show-normalDay, .roomInfo .roomInfo-right .roomForm .show-holiday {
+  background-color: #EDEDED;
+  color: #6D7278;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shown {
+  display: block;
+}
+
+.false {
+  opacity: 0.2;
+}
+
+#demo-1 {
+  display: none;
+}
+
+.lightpick {
+  display: inline;
+}
+
+@media (max-width: 800px) {
+  .roomInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .roomInfo .roomInfo-left {
+    width: 100%;
+  }
+  .roomInfo .roomInfo-middle {
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flex-start;
+            flex-direction: flex-start;
+    margin-top: 2rem;
+  }
+  .roomInfo .roomInfo-middle .room-normalDay span {
+    font-size: 1.5rem;
+  }
+  .roomInfo .roomInfo-middle .room-normalDay h4 {
+    margin-top: 1rem;
+    color: #6D7278;
+    font-size: 0.8rem;
+  }
+  .roomInfo .roomInfo-middle .room-holiday {
+    padding-top: 0.75rem;
+    margin-top: 0;
+    margin-left: 37%;
+    font-size: 0.8rem;
+  }
+  .roomInfo .roomInfo-middle .room-holiday h4 {
+    color: #6D7278;
+  }
+  .roomInfo .roomInfo-right {
+    width: 100%;
+    margin-top: 3rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  .roomInfo .roomInfo-right .calnedar-section {
+    margin-bottom: 2rem;
+  }
+  .roomInfo .roomInfo-right .roomForm {
+    position: relative;
+    left: 0;
+    margin-left: 5%;
+  }
+}
+
+.swiper-container {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.swiper-container .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-container .shop-info {
+  position: absolute;
+  top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  font-weight: 500;
+  z-index: 999;
+}
+
+.swiper-container .shop-info .shop-link {
+  margin-top: 14%;
+}
+
+.swiper-container .shop-info ul {
+  border-left: 3px solid black;
+  padding-left: 2rem;
+}
+
+.swiper-container .shop-info i {
+  margin-right: 1rem;
+}
+
+.swiper-container .shop-info li {
+  padding-top: 1rem;
+}
+
+.swiper-container .shop-info li:last-child i {
+  margin-right: 0.85rem;
+}
+
+.swiper-container .shop-info a, .swiper-container .shop-info a:hover {
+  color: black;
+}
+
+.container-custom {
+  margin: 0 auto;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  position: relative;
+  top: -5rem;
+  z-index: 1;
+}
+
+.container-custom li {
+  display: block;
+}
+
+.container-custom li:hover {
+  -webkit-box-shadow: 6px 12px 14px 0px #9f9fb3;
+  box-shadow: 6px 12px 14px 0px #9f9fb3;
+}
+
+.container-custom .card .img-fluid {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-custom .card .small {
+  font-size: 0.5rem;
+}
+
+.container-custom .card .card-textBlock {
+  position: relative;
+  background: #F7F7F7;
+  color: black;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container-custom .card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 1rem;
+  }
+  .swiper-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .swiper-container .shop-info {
+    top: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-custom {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
