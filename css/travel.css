@@ -129,8 +129,6 @@ select {
 .Button4{
 	background-color:#559AC8;
 }
-
-
 .thin_hr {
 	margin-top:110px;
 	margin-left:2%;
@@ -138,8 +136,6 @@ select {
 	height:1px;
 	width:98%;
 }
-
-
 .fa-sort-down{
 	color:#559AC8;
 	padding-left:6px;
@@ -153,8 +149,6 @@ select {
 	z-index:1;
 	background-color:white;
 }
-
-
 
 .zoneName
 {
@@ -293,7 +287,7 @@ select {
 	margin-left:43%;
 	
 }
-@media(min-width:400px) and (max-width:1024px) {
+@media(min-width:500px) and (max-width:1024px) {
 	.hotArea{
 		margin-left:10%;
 		height:270px;
@@ -311,7 +305,6 @@ select {
 
 	.fa-sort-down{
 	   left:49%;
-	   top:79%;
 	}
 	.thin_hr {
 	   margin-top:250px;
@@ -326,7 +319,6 @@ select {
 		display:none;
 	}
 }
-
 
 
 
